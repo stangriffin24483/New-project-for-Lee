@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VetDose</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1 id="title">VetDose</h1>
+      <select id="lang" onchange="changeLang(this.value)">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+    </div>
+
+    <label id="weightLabel">Weight:</label>
+    <input type="number" id="weight" placeholder="Enter weight">
+
+    <select id="unit">
+      <option value="kg">kg</option>
+      <option value="lbs">lbs</option>
+    </select>
+
+    <label id="medLabel">Medication:</label>
+    <select id="med">
+      <option value="amoxicillin">Amoxicillin</option>
+      <option value="carprofen">Carprofen</option>
+      <option value="enrofloxacin">Enrofloxacin</option>
+    </select>
+
+    <button id="calcBtn" onclick="calculateDose()">Calculate</button>
+
+    <h2 id="result"></h2>
+    <p id="warning"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
