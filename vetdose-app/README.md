@@ -10,6 +10,14 @@ A simple web-based veterinary medication dosage calculator.
   - Amoxicillin (10 mg/kg)
   - Carprofen (4 mg/kg)
   - Enrofloxacin (5 mg/kg)
+  - Metronidazole (10 mg/kg)
+  - Prednisone (0.5 mg/kg)
+  - Doxycycline (5 mg/kg)
+  - Cephalexin (20 mg/kg)
+  - Gabapentin (10 mg/kg)
+  - Tramadol (2 mg/kg)
+  - Famotidine (0.5 mg/kg)
+  - Maropitant (1 mg/kg)
 - Safety warnings for very small or large patients
 - History saving (last 5 calculations stored locally)
 

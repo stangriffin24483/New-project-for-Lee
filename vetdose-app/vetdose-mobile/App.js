@@ -6,7 +6,29 @@ import { Picker } from '@react-native-picker/picker';
 const meds = {
   amoxicillin: 10,   // mg/kg
   carprofen: 4,
-  enrofloxacin: 5
+  enrofloxacin: 5,
+  metronidazole: 10,
+  prednisone: 0.5,
+  doxycycline: 5,
+  cephalexin: 20,
+  gabapentin: 10,
+  tramadol: 2,
+  famotidine: 0.5,
+  maropitant: 1
+};
+
+const freq = {
+  amoxicillin: '2-3',
+  carprofen: '1-2',
+  enrofloxacin: '1-2',
+  metronidazole: '2',
+  prednisone: '1-2',
+  doxycycline: '1-2',
+  cephalexin: '2',
+  gabapentin: '2-3',
+  tramadol: '2-3',
+  famotidine: '2',
+  maropitant: '1'
 };
 
 export default function App() {
@@ -29,7 +51,7 @@ export default function App() {
     }
 
     const doseMg = weightKg * meds[med];
-    setResult(`Dose: ${doseMg.toFixed(2)} mg`);
+    setResult(`Dose: ${doseMg.toFixed(2)} mg. Administer ${freq[med]} times daily.`);
 
     let warn = '';
     if (weightKg < 1) warn = '⚠️ Very small patient—double check dose!';
@@ -41,7 +63,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🐾 VetDose</Text>
+      <Text style={styles.title}>🐾 Aliyahs VetDose</Text>
 
       <Text>Weight:</Text>
       <TextInput
@@ -70,6 +92,14 @@ export default function App() {
         <Picker.Item label="Amoxicillin" value="amoxicillin" />
         <Picker.Item label="Carprofen" value="carprofen" />
         <Picker.Item label="Enrofloxacin" value="enrofloxacin" />
+        <Picker.Item label="Metronidazole" value="metronidazole" />
+        <Picker.Item label="Prednisone" value="prednisone" />
+        <Picker.Item label="Doxycycline" value="doxycycline" />
+        <Picker.Item label="Cephalexin" value="cephalexin" />
+        <Picker.Item label="Gabapentin" value="gabapentin" />
+        <Picker.Item label="Tramadol" value="tramadol" />
+        <Picker.Item label="Famotidine" value="famotidine" />
+        <Picker.Item label="Maropitant" value="maropitant" />
       </Picker>
 
       <Button title="Calculate" onPress={calculateDose} />
